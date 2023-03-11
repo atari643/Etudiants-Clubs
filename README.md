@@ -1,92 +1,61 @@
-# Etudiants-Clubs
+# TP6 : Méthodologie sur le projet "Etudiants-Clubs"
 
 
+![diagramme de Classes](./etudiants-clubs.png)
 
-## Getting started
+Votre travail en équipe (trinôme/binôme) durant cette séance de TP sera évalué.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+- La composition des équipes est imposée et votre travail va reprendre le projet ("Students-Clubs") étudié dans votre module ```R2.01 conception et programmation Objet```,
+- Vous partez d'un projet gitlab existant créé avec un template de code : un membre de votre équipe se verra attribuer le rôle ```Maintainer``` sur ce dépôt,
+- Invitez les autres membres de l'équipe comme ```developer```.
 
-## Add your files
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+On vous demande de mettre en application les différents outils vus durant ce module :
 
-```
-cd existing_repo
-git remote add origin https://gitlab-ce.iut.u-bordeaux.fr/Johnen/etudiants-clubs.git
-git branch -M main
-git push -uf origin main
-```
+* tests (imposé),
+* git (imposé),
+* exceptions si la fonctionnalité le justifie (imposé),
+* javadoc (imposé),
+* couverture de test (recommandé),
+* linter (recommandé).
 
-## Integrate with your tools
+Vous devez également écrire un `README.md` avec :
 
-- [ ] [Set up project integrations](https://gitlab-ce.iut.u-bordeaux.fr/Johnen/etudiants-clubs/-/settings/integrations)
+- ce qui a été fait, par qui, et qui marche,
+- ce qui ne marche pas,
+- le score couverture.
 
-## Collaborate with your team
+La couverture des tests peut être obtenue via l'exécution du script "creationJaCoCoReport.sh"
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+Votre méthodologie vue lors des deux premiers TPs (un dépôt git avec des branches, des tests écrits, des fonctionnalités documentées  validées puis poussées régulièrement, etc.) sera un point important de votre travail et sera aussi évaluée.
 
-## Test and Deploy
+**Vous ferez référence aux étiquettes des besoins exprimés ci-dessous (`A`, `B`, ... ) pour nommer vos branches et les commits.**
 
-Use the built-in continuous integration in GitLab.
+Afin de cadrer votre travail sur la partie test, voici une liste de besoins pouvant être implémentés (```Backlog``` en méthode agile) et vous pouvez la compléter par vos propres idées de besoins (à condition de l'expliciter clairement dans votre `README.md`) :
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+- A. La capacité d'un club est au plus de 30 membres.
+- B. Un candiature sans contenu ou avec un contenu vide est rejetée (une exception est levée).
+- C. Un étudiant a candidaté à au moins 2 clubs.
+- D. Chaque candidature a un score (note donnée par un rapporteur externe sur cette candidature).
 
-***
+- E. Chaque club sélectionne parmi les candidatures recues 
+d'étudiant sans club la meilleur candidature (qui a le meilleur score). L'étudiant devient membre du club. 
+- F.  L'opération précédent est répétée tant qu'il est possible d'affecter un étudiant à un club.
 
-# Editing this README
+- G. Chaque membre d'un club  X a un score (qui est le score de la candidature de ce membre au club X).
+- H Chaque club a une e-répudation : la moyenne des scores de ses membres
+- I. Il existe un catalogue internet des clubs (name, capacité, e-reputation)  
+où les clubs sont listés dans l'ordre de leur e-réputation.
+- K. Les clubs ont des noms distincts.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+On s'attend à ce que chaque étudiant développe 2 fonctionnalités correctement testées et intégrées en suivant la méthodologie.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+**barème indicatif** :
 
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+* readme : 2 pts
+* code compile : 2 pts,  
+* javadoc : 4 pts
+* git : 4 pts 
+* tests : 5 pts
+* exception : 3 pts
