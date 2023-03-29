@@ -6,7 +6,7 @@
 Votre travail en équipe (trinôme/binôme) durant cette séance de TP sera évalué.
 
 - La composition des équipes est imposée et votre travail va reprendre le projet ("Students-Clubs") étudié dans votre module ```R2.01 conception et programmation objet```,
-- Vous partez d'un projet gitlab existant créé avec un template de code : un membre de votre équipe se verra attribuer le rôle ```Maintainer``` sur ce dépôt,
+- Vous partez d'un projet gitlab existant créé avec un template de code (ici : https://gitlab-ce.iut.u-bordeaux.fr/Johnen/etudiants-clubs) : un membre de votre équipe se verra attribuer le rôle ```Maintainer``` sur ce dépôt,
 - Invitez les autres membres de l'équipe comme ```Developer```.
 
 On vous demande de mettre en application les différents outils vus durant ce module :
