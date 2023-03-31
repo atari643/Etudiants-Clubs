@@ -1,6 +1,6 @@
 package main;
 
-public class Application {
+public class Application extends ExceptionContentCandidate {
     private String content;
     private Student student;
     private Club club;
@@ -9,7 +9,17 @@ public class Application {
     }
     public Club getClub() {return club; }
     public Student getStudent() {return student; }
-
+    public String getContent(){
+        try{
+            if(content==null || content==""){
+                throw new IllegalArgumentException();
+            }else{
+                return content;
+            }
+        }catch(IllegalArgumentException e){
+            System.out.println("Le contenu est vide ou inexistant");
+        }
+    }
     /**
     * return a description of the application  including its content
     *  
