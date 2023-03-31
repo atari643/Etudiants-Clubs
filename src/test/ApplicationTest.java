@@ -30,6 +30,11 @@ public class ApplicationTest {
         app.getContent();
     }
     @Test
+    public void testGetContent(){
+        Application app2 = new Application("Michel", "tennis", "Voici ma candidature");
+        assertEquals("Voici ma candidature",app.getContent());
+    }
+    @Test
     public void testToString() {
 
     }
