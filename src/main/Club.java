@@ -50,7 +50,10 @@ public class Club {
     static public boolean addOneMemberToEachClub() {
         boolean success = false;
         for (Club club  : clubs){
-            if (club.addMember()) success = true;
+            if(club.members.size() < 30){
+                if (club.addMember()) success = true;
+            }
+                
         }  
         return success;
     }
